@@ -1,11 +1,12 @@
 {
   "name": "psobb-memo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
-    "build:prod": "ng build -prod",
-    "deploy": "npm run build:prod && gh-pages -d dist"
+    "build:prod": "ng build -prod --base-href \"/psobb-memo/\"",
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
